@@ -1,0 +1,121 @@
+//Project1
+//File: tokensize.c
+//Name: Miguel Dias Pinto md2383@rit.edu
+//
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include "classes.h"
+
+//CC_WS         (Whitespace)                = 0
+//CC_NL         ('\n')                      = 1
+//CC_ALPHA      (Alphabetic & Underscore)   = 2
+//CC_ZERO       (Digit 0)                   = 3
+//CC_OCTAL      (Octal/Decimal digits 1-7)  = 4
+//CC_DECMIAL    (Decimal digits 8 & 9)      = 5
+//CC_SLASH      ('/')                       = 6
+//CC_STAR       ('*')                       = 7
+//CC_ARITH      (other arithmetic op +,-,%) = 8
+//CC_OTHER      (other ASCII character)     = 9
+//CC_EOF        (end of file)               = 10
+//CC_ERROR      (anything else)             = 11
+
+const char *delim = " ";
+
+int states = 0;
+int start = 0;
+int accept = 0;
+
+struct matrix_cell{
+    int class;
+    int state;
+    char* action;
+};
+
+/*
+void  make_matrix( struct matrix_cell * matrix[][],  int line , char * str[] ){
+    if (matrix == NULL){
+        struct matrix_cell *m[states][accept];
+    }
+        char *token = strtok (NULL, delim);
+        struct matrix_cell *m[states];
+        for(int i = 0; i < states; i++){
+            struct matrix_cell cell;
+            if(!(token[0] == i)){
+                m[i] = NULL;
+                matrix[line][i] = m[i];
+            }
+            else{
+                cell.class = i;
+                cell.state = (int)token[2];
+                cell.action = token[3];
+                m[i] = cell;
+                matrix[line][i] = m[i];
+        }
+    }
+}
+*/
+
+int main(int argc, char * argv[]){
+    if(!(argc > 1)){
+        printf("Usage: ./tokensize tmfile \n");
+        exit(1);
+    }
+    else{
+        int len = 100000;
+        char buff[len];
+        char *ptr = NULL;
+        char *token = NULL;
+        FILE *f;
+
+        f = fopen( argv[1], "r");
+        
+        if(f == NULL){
+            perror("Unexpected Error");
+            exit(EXIT_FAILURE);
+        }
+        int n;
+        while((ptr = fgets(buff, len, f)) != NULL){
+            token = strtok(buff, delim);
+            printf("token not null: %s \n", token);
+                if(!(token[0] == '#')){
+                    printf("token[0] != '#'");
+                    if(strcmp(token, "states") >= 0){
+                        printf("STATES!: %s\n", token);
+                        token = strtok (NULL, delim);
+                        printf("State val: %s\n", token);
+                        char *end;
+                        states = (int)(strtol(token, &end, 10));
+                    }
+                    else if(strcmp(token, "start") >= 0){
+                        printf("START!: %s\n", token);
+                        token = strtok (NULL, delim);
+                        printf("Start val: %s\n", token);
+                        char *end;
+                        start = (int)(strtol(token, &end, 10));
+                        n = start;
+                    }
+                    else if(strcmp(token, "accept") >= 0){
+                        printf("ACCEPT!: %s\n", token);
+                        token = strtok (NULL, delim);
+                        printf("Accept val: %s\n", token);
+                        char *end;
+                        accept = (int)(strtol(token, &end, 10));
+                    }
+                    else if(isdigit(token[0])){
+                        printf("Matrix by line: %s, buff: %s \n", token, buff);
+//                        make_matrix(NULL, n, &token);
+                        n++;
+                        token = strtok (NULL, delim);
+                    }
+                    else{
+                        printf("broke \n");
+                        break;
+                    }
+                }
+            }
+        fclose(f);
+    }
+    return 0;    
+}

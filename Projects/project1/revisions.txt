@@ -1,0 +1,23 @@
+commit 1e70ba127cf832a3ed9d389ab17b387d35312d32
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Thu Oct 13 22:28:56 2022 -0400
+
+    now finished
+
+commit 1720219fb54007dd61411148a5592daea4d732b4
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Thu Oct 13 22:27:28 2022 -0400
+
+    finished
+
+commit 612f22091d18e3e93bc0699eee406c7e0dad2084
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Thu Oct 13 22:19:27 2022 -0400
+
+    completed #3
+
+commit b73511b7efc8a78d5cb0c341d404a900a7c9a418
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Thu Oct 13 20:08:04 2022 -0400
+
+    finally fixed the first input and built the matrix

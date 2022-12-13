@@ -1,0 +1,23 @@
+commit f247290cd9e799f20e5ce81337aeec23a88aa0db
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Sun Nov 20 23:52:32 2022 -0500
+
+    I use this as proof I have submission before the deadline, however try wouldn't let me submit, its currently 7 minutes before the deadline
+
+commit 9a645fc9601767ceb94e9baa9d7899b9920fa203
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Sun Nov 20 22:49:54 2022 -0500
+
+    runs!
+
+commit 2c6cf3391819efd4a02c73148d44cec9fa4e18d4
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Sun Nov 20 21:08:39 2022 -0500
+
+    debugging
+
+commit 2bdf3cd61fb8997f1bf7b7856ef9a5054853bfc9
+Author: Miguel Dias Pinto <md2383@cs.rit.edu>
+Date:   Wed Nov 16 19:33:00 2022 -0500
+
+    project provided materials
