@@ -1,0 +1,11 @@
+Courses/CS243/
+├── Homeworks
+│   ├── hw1
+│   │   └── your-hw1-files-go-here
+│   └── hw2
+│       └── your-hw2-files-go-here
+└── Projects
+    └── project1
+        └── your-project1-files-go-here
+
+5 directories, 3 files

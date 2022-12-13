@@ -1,0 +1,106 @@
+My home path is:  /usr/local/dcs/jdk/bin:/usr/local/dcs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/stu14/s6/md2383/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/stu14/s6/md2383/.dotnet/tools
+Files in my HOME:
+.
+├── .Doxy-hwl.swo
+├── .Doxy-hwl.swp
+├── Doc
+│   └── html
+│       ├── bc_s.png
+│       ├── bdwn.png
+│       ├── closed.png
+│       ├── doc.png
+│       ├── doxygen.css
+│       ├── doxygen.png
+│       ├── dynsections.js
+│       ├── files.html
+│       ├── folderclosed.png
+│       ├── folderopen.png
+│       ├── globals.html
+│       ├── globals_func.html
+│       ├── graph_legend.html
+│       ├── graph_legend.md5
+│       ├── graph_legend.png
+│       ├── index.html
+│       ├── jquery.js
+│       ├── menu.js
+│       ├── menudata.js
+│       ├── myfile_8txt.html
+│       ├── nav_f.png
+│       ├── nav_g.png
+│       ├── nav_h.png
+│       ├── open.png
+│       ├── program_8c.html
+│       ├── program_8c__incl.map
+│       ├── program_8c__incl.md5
+│       ├── program_8c__incl.png
+│       ├── search
+│       │   ├── all_0.html
+│       │   ├── all_0.js
+│       │   ├── all_1.html
+│       │   ├── all_1.js
+│       │   ├── close.png
+│       │   ├── files_0.html
+│       │   ├── files_0.js
+│       │   ├── files_1.html
+│       │   ├── files_1.js
+│       │   ├── functions_0.html
+│       │   ├── functions_0.js
+│       │   ├── mag_sel.png
+│       │   ├── nomatches.html
+│       │   ├── search.css
+│       │   ├── search.js
+│       │   ├── search_l.png
+│       │   ├── search_m.png
+│       │   ├── search_r.png
+│       │   └── searchdata.js
+│       ├── splitbar.png
+│       ├── sync_off.png
+│       ├── sync_on.png
+│       ├── tab_a.png
+│       ├── tab_b.png
+│       ├── tab_h.png
+│       ├── tab_s.png
+│       └── tabs.css
+├── Doxy-hw1
+├── DoxyDefault
+├── build.sh
+├── clean.sh
+├── myfile.txt
+├── mytree.txt
+├── myvimrc
+├── out.welcome
+├── program.c
+├── temp2657177
+│   └── Courses
+│       └── cs243
+├── temp308107
+│   └── Courses
+│       └── cs243
+├── temp3382680
+│   └── Courses
+│       └── cs243
+├── temp843964
+│   └── Courses
+│       └── cs243
+├── temp949840
+│   └── Courses
+│       └── cs243
+├── temp982082
+│   └── Courses
+│       └── cs243
+├── welcome.sh
+└── your-hw1-files-go-here
+
+21 directories, 68 files
+My tdmp folder: 
+
+Translation steps: 
+1. Print Files in 'Home' Directory
+2. Create temporary subdirectory
+3. Create subdirectory 'Courses' under the temp directory
+4. Create Subdirectory 'cs243' under 'Courses'
+5. Print 'My Temp folder'
+Warning flags:  0
+C dialect flags:  0
+Debug flags required:  0
+LoginId:  md2383
