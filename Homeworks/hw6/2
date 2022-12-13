@@ -1,0 +1,158 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+#include "Matrix.h"
+
+struct matrix_st{
+    float **values;
+};
+
+Matrix mat_create( size_t rows, size_t cols){
+    Matrix newMatrix;
+    
+    newMatrix = (Matrix)malloc(sizeof(struct matrix_st));
+    newMatrix->values = (float**)malloc((int)(rows)sizeof(float*));
+    for(int i = 0; i < (int) rows; i++){
+        newMatrix->values[i] = (float*)malloc(sizeof(float)*(int)(cols));
+        for(int j = 0; j < (int) cols; j++){
+            if(rows == cols && i == j){
+                newMatrix->values[i][j] = 1.000;
+            }
+            else{
+                newMatrix->values[i][j] = 0.000;
+            }
+        }
+    }
+    return newMatrix;
+}
+
+void mat_destroy( Matrix mat){
+    for(int i = 0; i < (int) sizeof(mat->values); i++){
+        for(int j = 0; j < (int) sizeof(mat->values[i]); j++){
+            mat->values[i][j] = null;
+        }
+        mat->values[i] = null;
+    }
+    mat->values = null;
+    free(mat);
+}
+
+void mat_init( Matrix mat, const float data[] ){}
+
+Matrix mat_duplicate( const Matrix mat){
+    if(mat == NULL || mat->values == NULL){
+        return NULL;
+    }
+    Matrix->values[i] = (*matrix_st)malloc( len( mat->values ) );
+    for(int i = 0; i < (int)sizeof(mat->values); i++){
+        Matrix->values[i][j] = (matrix_st)malloc( len( mat->values[i] ) );
+        for(int j = 0; j < (int)sizeof(mat->values[i]); j++){
+            Matrix->values[i][j] = mat->values[i][j];
+        }
+    }
+    return Matrix;
+}
+
+bool mat_equals( const Matrix m1, const Matrix m2){
+    if(len( m1->values) != len( m2->values)){
+        return false;
+    }
+    else{
+        for(int i = 0; i < len( m1->values ); i++){
+            if( len( m1->values[i] ) != len( m2->values[i] )){
+                return false;
+            }
+            for(int j = 0; j < len( m1->values[i]); j++){
+                if(m1->values[i][j] != m2->values[i][j]){
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+void mat_scalar_mult( Matrix mat, float data){
+    for(int i = 0; i < len( mat->values ); i++){
+        for(int j = 0; j < len( mat->values[i] ); j++){
+            mat->values[i][j] *= data;
+        }
+    }
+}
+
+Matrix mat_mult( const Matrix m1, const Matrix m2){
+    if(mat == NULL || mat->values == NULL){
+        return NULL;
+    }
+    if(len( m1->values != len( m2->values ))){
+        return NULL;
+    }
+    Matrix->values = (*matrix_st)malloc( len( m1->values) );
+    for(int i = 0; i < len ( m1->values ); i++){
+        Matrix->values[i] = (*matrix_st)malloc( len( m1->values[i] ) );
+        for(int j = 0; j < len ( m1->values[i] ); j++){
+            Matrix->values[i][j] = m1->values[i][j] * m2->values[i][j];
+        }
+    }
+    return Matrix;
+}
+
+Status mat_get_cell( const Matrix mat, float *data, size_t row, size_t col){
+    data = NULL;
+    if( len( mat->values ) < row){
+        return Status->BadRowNumber;
+    }
+    if( len( mat->values[0] ) < col){
+        return Status->BadColNumber;
+    }
+    data = mat->values[row - 1][col - 1];
+    return Status->Success;
+}
+
+Status mat_get_row( const Matrix mat, float data[], size_t row){
+    data = NULL
+    if( len( mat->values ) < row){
+        return Status->BadRowNumber;
+    }
+    data = mat->values[row - 1];
+    return Status->Success;
+}
+
+Status mat_set_cell( Matrix mat, float data, size_t row, size_t col){
+    Status s;
+    float *empty;
+    if((s = mat_get_cell(mat, empty, row, col)) == Status->Success){
+        mat[row - 1][col - 1] = data;
+        return Status->success;
+    }
+    empty = NULL;
+    return s;
+} 
+
+Status mat_set_row( Matrix mat, const float data[], size_t row){
+    Status s;
+    float *empty;
+    if((s = mat_get_row(mat, empty, row, col)) == Status->Success){
+        mat[row - 1] = data[];
+    }
+    empty = NULL;
+    return s;
+}
+
+Matrix mat_transpose( const Matrix mat){
+
+}
+
+mat_print( const Matrix mat, File *stream){
+    int row = len( mat->values );
+    int col = len( mat->values[0]);
+    printf("%d rows, %d columns:\n", row, col);
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            printf("   %f", mat[i][j]);
+        }
+        printf("\n");
+    }
+}

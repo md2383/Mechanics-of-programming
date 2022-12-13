@@ -1,0 +1,15 @@
+==2555460== Memcheck, a memory error detector
+==2555460== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2555460== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==2555460== Command: ./explore cave1.txt
+==2555460== Parent PID: 2464637
+==2555460== 
+==2555460== 
+==2555460== HEAP SUMMARY:
+==2555460==     in use at exit: 0 bytes in 0 blocks
+==2555460==   total heap usage: 32 allocs, 32 frees, 14,878 bytes allocated
+==2555460== 
+==2555460== All heap blocks were freed -- no leaks are possible
+==2555460== 
+==2555460== For lists of detected and suppressed errors, rerun with: -s
+==2555460== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
