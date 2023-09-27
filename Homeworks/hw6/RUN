@@ -1,14 +1,16 @@
 #!/bin/sh
 #
-# student testing script
+# testing script for student to compare output with the example outputs
 #
+# Student: execute this script to compare your output with the examples.
 
-f=1
-while [ -f stdout.$f ]
+echo "test 3 and test 4 will always have diffs"
+echo "The only diffs should be line 1, which your test program does not output"
+
+for f in 1 2 
 do
 	echo Running test $f
-	./mtest$f > mtest-out.$f
-	echo cmp stdout.$f mtest-out.$f
-	cmp stdout.$f mtest-out.$f
-	f=`expr $f + 1`
+	./queueTest$f > out.$f
+	echo diff stdout.$f out.$f
+	diff stdout.$f out.$f
 done

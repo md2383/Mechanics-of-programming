@@ -1,0 +1,71 @@
+Lab 1: System Intro
+Activity 1: questions1.txt, warning.c : 30 points total
+Name: Miguel Dias Pinto md2383@rit.edu
+
+1. When you first log in, what is the absolute path of your home directory?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    /home/stu14/s6$/md2383 (Student home directory, in my case it is md2383)
+
+2. What command will display the contents of your current
+working directory, so that it shows the difference between
+files and directories?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    ls - as a list (can use ls .. or ls ../.. to list back how many directories you want)
+    tree - as a tree  (can use tree .. or tree ../.. to make a tree back how many directories you want)
+
+3. What command would you use to change your working directory from
+your home directory to the existing subdirectory Courses/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    cd (directory here, also use cd .. to go back and cd ../.. to go back how many you want )
+
+4. Within the Courses/ subdirectory, what command would you use to
+create the subdirectory csci243/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    mkdir - makes the directory, in this case it would be: "mkdir csci243"clear
+    
+5. When warning.c is compiled as: 
+        gcc -c warning.c
+    There is no indication of any warnings/problems.
+    
+    a.) What compiler flag is used to enable the display of warnings?
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        -Wall for all warnings
+        -Wextra for extra warnings
+        -Pedantic warnings that violate ISO C
+    
+    b.) In your own words, explain all warnings from compiling warning.c.
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+        1. b is a variable that isn't used anywhere else
+        2. main function only takes 0 or 2 arguments (either (void) or (int argc, char *argv[])), But in this case its just int argc.
+        3. parameter int argc is not being used in the code
+        4. compute has a return type of an int but doesn't return anything
+        5. x doesn't have a value assigned when you do y+x. This can cause errors and not the right results
+    
+    c.) Fix warning.c so it compiles without warning and runs correctly.
+
+	(Your answer is the submitted code.)
+
+6. What compiler flag compiles C programs using the ISO C99 standard?
+      
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    -std=c99
+   
+7. Put the four steps of compilation process into their proper order from
+first to last.
+
+    A. Link
+    B. Assemble
+    C. Preprocess
+    D. Compile
+    
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+    1. C - Preprocess
+    2. D - Compile
+    3. B - Assemble
+    4. A - Link

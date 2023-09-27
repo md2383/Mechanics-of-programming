@@ -1,0 +1,15 @@
+1. Which sort was faster?
+    
+  Typically, the Threaded was faster.
+    
+2. Was it what you expected?
+  
+  This was not what I expected. I expected the Non-Threaded to be faster when it came to smaller sizes, But the threaded seemed to be faster by just a 1000ths of seconds.
+  
+3. Which one did you expect to be faster and why?
+
+  I expected the Threaded to be faster for larger data and Non-Threaded for shorter data as threaded runs multiple cores compared to just running it on one core
+  
+4. What could have effected the results?
+
+  Results can be affected with hardware limitations, Synchronization or Termination issues

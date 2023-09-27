@@ -1,3 +1,0 @@
-Query Results: 
-0	./word_tree
-Word Tree: 

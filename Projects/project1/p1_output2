@@ -1,0 +1,17 @@
+$ ahnentafel 1010b
+base-10 value: 10
+family relation: father's mother's father
+generations back: 3
+
+$ ahnentafel 31
+ahnentafel number in binary: 11111
+family relation: mother's mother's mother's mother
+generations back: 4
+
+$ ahnentafel mother\'s father\'s father
+ahnentafel number in binary: 1100
+ahnentafel number in base-10: 12
+generations back: 3
+
+# notice that in the last example the ' had to be escaped since
+# the shell treats the single-quote as a special character

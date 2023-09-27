@@ -1,5 +1,5 @@
 #
-# Created by gmakemake (Ubuntu Jul 25 2014) on Wed Oct 12 21:00:53 2022
+# Created by gmakemake (Ubuntu Jul 25 2014) on Wed Jul  5 16:43:16 2023
 #
 
 #
@@ -41,20 +41,19 @@ LINK.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)
 COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) -c
 COMPILE.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) -c
 CPP = $(CPP) $(CPPFLAGS)
-########## Flags from header.mak
-
-CC = gcc
-CFLAGS = -ggdb -std=c99 -Wall -Wextra -pedantic
-CLIBFLAGS =
-
-########## End of flags from header.mak
+########## Default flags (redefine these with a header.mak file if desired)
+CXXFLAGS =	-ggdb
+CFLAGS =	-ggdb
+CLIBFLAGS =	-lm
+CCLIBFLAGS =	
+########## End of default flags
 
 
 CPP_FILES =	
-C_FILES =	tokenize.c
+C_FILES =	ahnentafel.c
 PS_FILES =	
 S_FILES =	
-H_FILES =	classes.h
+H_FILES =	ahnentafel.h
 SOURCEFILES =	$(H_FILES) $(CPP_FILES) $(C_FILES) $(S_FILES)
 .PRECIOUS:	$(SOURCEFILES)
 OBJFILES =	
@@ -63,16 +62,16 @@ OBJFILES =
 # Main targets
 #
 
-all:	tokenize 
+all:	ahnentafel 
 
-tokenize:	tokenize.o $(OBJFILES)
-	$(CC) $(CFLAGS) -o tokenize tokenize.o $(OBJFILES) $(CLIBFLAGS)
+ahnentafel:	ahnentafel.o $(OBJFILES)
+	$(CC) $(CFLAGS) -o ahnentafel ahnentafel.o $(OBJFILES) $(CLIBFLAGS)
 
 #
 # Dependencies
 #
 
-tokenize.o:	classes.h
+ahnentafel.o:	ahnentafel.h
 
 #
 # Housekeeping
@@ -84,7 +83,7 @@ archive.tgz:	$(SOURCEFILES) Makefile
 	tar cf - $(SOURCEFILES) Makefile | gzip > archive.tgz
 
 clean:
-	-/bin/rm -f $(OBJFILES) tokenize.o core
+	-/bin/rm -f $(OBJFILES) ahnentafel.o core
 
 realclean:        clean
-	-/bin/rm -f tokenize 
+	-/bin/rm -f ahnentafel 

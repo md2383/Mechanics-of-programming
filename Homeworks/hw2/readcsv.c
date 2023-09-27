@@ -1,11 +1,6 @@
 //// readcsv reads a csv file
 //// written by: Miguel Dias Pinto
 ////             md2383@rit.edu
-////
-//// comment: Grader last time asked 'what happened?' bc code wasn't finished, 
-////          if grader is the same, I  got caught up on work and didn't get to
-////          finish so I decided to start working on it earlier :D. Have a good day!
-////
 
 #include <stdio.h>
 #include <stdlib.h>
